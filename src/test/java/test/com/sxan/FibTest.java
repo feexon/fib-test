@@ -29,12 +29,6 @@ public class FibTest {
         } catch (IllegalArgumentException expected) {
             assertTrue(true);
         }
-        try {
-            fib(-1);
-            fail("should failing");
-        } catch (IllegalArgumentException expected) {
-            assertTrue(true);
-        }
     }
 
     private int fib(int n) {
