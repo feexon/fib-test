@@ -43,13 +43,13 @@ public class FibTest {
             throw new IllegalArgumentException("N is less than or equal to zero:" + n);
         }
 
-        int n_1 = 1;
+
         int n_2 = 1;
         int result = 1;
         while (n-- > 2) {
-            result = n_1 + n_2;
-            n_2=n_1;
-            n_1=result;
+            int n_1 = result;
+            result = result + n_2;
+            n_2 = n_1;
         }
         return result;
     }
