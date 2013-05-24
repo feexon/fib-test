@@ -16,6 +16,7 @@ public class FibTest {
     @Test
     public void constantValue() throws Exception {
        assertThat(fib(1),is(1));
+       assertThat(fib(2),is(1));
     }
 
     private int fib(int n) {
