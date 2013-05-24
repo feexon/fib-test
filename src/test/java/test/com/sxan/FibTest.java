@@ -42,9 +42,9 @@ public class FibTest {
         if (n <= 0) {
             throw new IllegalArgumentException("N is less than or equal to zero:" + n);
         }
-        if (n > 2) {
-            return fib(n - 1) + fib(n - 2);
+        if (n <= 2) {
+            return 1;
         }
-        return 1;
+        return fib(n - 1) + fib(n - 2);
     }
 }
