@@ -35,14 +35,15 @@ public class FibTest {
     @Test
     public void f3_equal_sumOf_f1_and_f2() throws Exception {
         assertThat(fib(3), equalTo(fib(1) + fib(2)));
+        assertThat(fib(5), equalTo(fib(3) + fib(4)));
     }
 
     private int fib(int n) {
         if (n <= 0) {
             throw new IllegalArgumentException("N is less than or equal to zero:" + n);
         }
-        if (n == 3) {
-            return fib(1) + fib(2);
+        if (n > 2) {
+            return fib(n-1) + fib(n-2);
         }
         return 1;
     }
