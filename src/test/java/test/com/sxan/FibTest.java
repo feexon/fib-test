@@ -19,6 +19,6 @@ public class FibTest {
     }
 
     private int fib(int n) {
-        return 0;
+        return 1;
     }
 }
