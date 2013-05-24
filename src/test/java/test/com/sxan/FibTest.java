@@ -25,7 +25,9 @@ public class FibTest {
     }
 
     private int fib(int n) {
-
+        if(n==0){
+            throw new IllegalArgumentException();
+        }
         return 1;
     }
 }
