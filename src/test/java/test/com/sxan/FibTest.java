@@ -43,7 +43,6 @@ public class FibTest {
             throw new IllegalArgumentException("N is less than or equal to zero:" + n);
         }
 
-
         int n_2 = 1;
         int result = 1;
         while (n-- > 2) {
