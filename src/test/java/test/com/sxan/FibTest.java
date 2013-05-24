@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,9 +21,20 @@ public class FibTest {
         assertThat(fib(2), is(1));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void shouldGiveAnInvalidN_raiseException() throws Exception {
-        fib(0);
+        try {
+            fib(0);
+            fail("should failing");
+        } catch (IllegalArgumentException expected) {
+            assertTrue(true);
+        }
+        try {
+            fib(-1);
+            fail("should failing");
+        } catch (IllegalArgumentException expected) {
+            assertTrue(true);
+        }
     }
 
     private int fib(int n) {
