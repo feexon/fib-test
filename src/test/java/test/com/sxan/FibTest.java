@@ -33,7 +33,7 @@ public class FibTest {
     }
 
     @Test
-    public void f3_equal_sumOf_f1_and_f2() throws Exception {
+    public void FibN_equalTo_SumOfPreviousTwoFibs_and_N_gt_2() throws Exception {
         assertThat(fib(3), equalTo(fib(1) + fib(2)));
         assertThat(fib(5), equalTo(fib(3) + fib(4)));
     }
@@ -43,7 +43,7 @@ public class FibTest {
             throw new IllegalArgumentException("N is less than or equal to zero:" + n);
         }
         if (n > 2) {
-            return fib(n-1) + fib(n-2);
+            return fib(n - 1) + fib(n - 2);
         }
         return 1;
     }
