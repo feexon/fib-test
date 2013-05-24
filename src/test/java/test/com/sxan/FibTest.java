@@ -28,13 +28,13 @@ public class FibTest {
             fib(0);
             fail("should failing");
         } catch (IllegalArgumentException expected) {
-            assertThat(expected.getMessage(),equalTo("N is less than or equal to zero:0"));
+            assertThat(expected.getMessage(), equalTo("N is less than or equal to zero:0"));
         }
     }
 
     private int fib(int n) {
-        if(n<=0){
-            throw new IllegalArgumentException("N is less than or equal to zero:0");
+        if (n <= 0) {
+            throw new IllegalArgumentException("N is less than or equal to zero:" + n);
         }
         return 1;
     }
