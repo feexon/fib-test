@@ -45,6 +45,8 @@ public class FibTest {
         if (n <= 2) {
             return 1;
         }
-        return fib(n - 1) + fib(n - 2);
+        int n_1 = fib(n - 1);
+        int n_2 = fib(n - 2);
+        return n_1 + n_2;
     }
 }
