@@ -50,6 +50,8 @@ public class FibTest {
         int result = 0;
         while (n-- > 2) {
             result = n_1 + n_2;
+            n_2=n_1;
+            n_1=result;
         }
         return result;
     }
