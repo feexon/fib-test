@@ -2,6 +2,7 @@ package test.com.sxan;
 
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
@@ -27,13 +28,13 @@ public class FibTest {
             fib(0);
             fail("should failing");
         } catch (IllegalArgumentException expected) {
-            assertTrue(true);
+            assertThat(expected.getMessage(),equalTo("N is less than or equal to zero:0"));
         }
     }
 
     private int fib(int n) {
         if(n<=0){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("N is less than or equal to zero:0");
         }
         return 1;
     }
