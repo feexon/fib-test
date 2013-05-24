@@ -42,12 +42,10 @@ public class FibTest {
         if (n <= 0) {
             throw new IllegalArgumentException("N is less than or equal to zero:" + n);
         }
-        if (n <= 2) {
-            return 1;
-        }
+
         int n_1 = 1;
         int n_2 = 1;
-        int result = 0;
+        int result = 1;
         while (n-- > 2) {
             result = n_1 + n_2;
             n_2=n_1;
