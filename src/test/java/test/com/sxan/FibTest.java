@@ -47,6 +47,10 @@ public class FibTest {
         }
         int n_1 = 1;
         int n_2 = 1;
-        return n_1 + n_2;
+        int result = 0;
+        while (n-- > 2) {
+            result = n_1 + n_2;
+        }
+        return result;
     }
 }
