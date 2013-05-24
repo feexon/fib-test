@@ -15,11 +15,17 @@ import static org.junit.Assert.assertThat;
 public class FibTest {
     @Test
     public void constantValue() throws Exception {
-       assertThat(fib(1),is(1));
-       assertThat(fib(2),is(1));
+        assertThat(fib(1), is(1));
+        assertThat(fib(2), is(1));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldGiveAnInvalidN_raiseException() throws Exception {
+        fib(0);
     }
 
     private int fib(int n) {
+
         return 1;
     }
 }
